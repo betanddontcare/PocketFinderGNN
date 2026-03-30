@@ -163,7 +163,7 @@ class Net(torch.nn.Module):
         return F.log_softmax(x, dim=1)
 
 trained_model = Net()
-trained_model = torch.load('modelGNN.pth', map_location ='cpu')
+trained_model = torch.load('modelGNN.pth', map_location='cpu', weights_only=False)
 
 ########### PREDICTION ###########
 @torch.no_grad()
