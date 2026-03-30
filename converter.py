@@ -170,10 +170,10 @@ def getFacesAssignedToEdges(data):
   list_of_faces = []
   i = 0
   while i < data.count('EDGE_CURVE'):
-    for edges_list in edges_assigned_to_faces:
+    for face_idx, edges_list in enumerate(edges_assigned_to_faces):
       for edge in edges_list:
         if edge == ('EDGE'+ str(i)):
-          list_of_faces.append('FACE' + str(edges_assigned_to_faces.index(edges_list)))
+          list_of_faces.append('FACE' + str(face_idx))
     i += 1
   return list_of_faces
 
