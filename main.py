@@ -79,7 +79,7 @@ def buildGraph(faces, edges):
 
   graph_edges_X = []
   for i in edges:
-    row = (i[1], i[2], {"shape" : 'i[1]', "type" : 'i[2]'})
+    row = (i[1], i[2], {"shape" : i[1], "type" : i[2]})
     graph_edges_X.append(row)
   
   X.add_nodes_from(graph_nodes_X)
